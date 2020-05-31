@@ -1,0 +1,3 @@
+#to avoid uploading config setting on the github 
+*.wsgi
+*.log

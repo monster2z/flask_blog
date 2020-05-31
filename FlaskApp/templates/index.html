@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf%}
+{% block title %}Goblins - Index{% endblock %}
+{% block head %}
+    {{super()}}
+    <style>
+    </style>
+{% endblock %}
+{% block page_content %}
+<div class="container">
+    <div class="page-header">
+    <h1>Hello, {%if current_user.is_authenticated%}{{current_user.username}}{%else%}Stranger{%endif%}!</h1><br>
+    {%if known%}
+    <p>Nice to see you again</p><br>
+    {%else%}
+    <p>Pleased to meet you</p><br>
+    {%endif%}
+    <p>The local date and time is {{ moment(current_time).format('LLL') }}</p>
+    <p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+    </div>
+    {{wtf.quick_form(form)}}
+</div>
+{% endblock %}
