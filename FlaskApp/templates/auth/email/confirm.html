@@ -1,7 +1,8 @@
 <p>Dear {{ user.username }},Welcome to Goblins!<p><br>
 
 To confirm your account please click on the following link:<br>
-{{url_for('auth.confirm', token=token, _external=True)}}<br>
+<a href="{{url_for('auth.confirm', token=token, _external=True)}}">
+{{url_for('auth.confirm', token=token, _external=True)}}</a><br>
 
 Sincerely,The Goblins maker<br>
 Note : replies to this email address are not monitored.<br>
