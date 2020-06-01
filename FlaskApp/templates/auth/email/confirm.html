@@ -1,11 +1,7 @@
-Dear {{ user.username }},
-Welcome to Goblins!
+<p>Dear {{ user.username }},Welcome to Goblins!<p><br>
 
-To confirm your account please click on the following link:
-{{ url_for('auth.confirm', token=token, _external=True)}}
+To confirm your account please click on the following link:<br>
+{{url_for('auth.confirm', token=token, _external=True)}}<br>
 
-Sincerely,
-
-The Goblins maker
-
-Note : replies to this email address are not monitored.
+Sincerely,The Goblins maker<br>
+Note : replies to this email address are not monitored.<br>
