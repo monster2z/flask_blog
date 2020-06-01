@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf%}
+{% block title %}Goblins - Index{% endblock %}
+{% block head %}
+    {{super()}}
+    <style>
+    </style>
+{% endblock %}
+{% block page_content %}
+<div class="container">
+    <div class="page-header">
+    <h1>Hello, {%if current_user.is_authenticated%}{{current_user.username}}{%else%}Stranger{%endif%}!</h1><br>
+    {%endif%}
+    </div>
+    <div><h4>You have not confirmed your accout yet.</h4><br>
+    <p>Before you can access this site you need to confirm your account. Check your inbox, you should have received 
+        an eamil with a confirmation link</p>
+    </div>
+    <div>Need another confirmation email?<a href="{{url_for('auth.confirm')}}">Click here</a></div>
+    <!--{{wtf.quick_form(form)}}-->
+</div>
+{% endblock %}
