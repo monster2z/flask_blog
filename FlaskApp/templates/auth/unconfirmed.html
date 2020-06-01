@@ -1,11 +1,7 @@
 {% extends "base.html" %}
-{% import "bootstrap/wtf.html" as wtf%}
-{% block title %}Goblins - Index{% endblock %}
-{% block head %}
-    {{super()}}
-    <style>
-    </style>
-{% endblock %}
+
+{% block title %}Goblins - Confirm your account{% endblock %}
+
 {% block page_content %}
 <div class="container">
     <div class="page-header">
@@ -16,6 +12,6 @@
         an eamil with a confirmation link</p>
     </div>
     <div>Need another confirmation email?<a href="{{url_for('auth.resend_confirmation')}}">Click here</a></div>
-    <!--{{wtf.quick_form(form)}}-->
+    
 </div>
 {% endblock %}
